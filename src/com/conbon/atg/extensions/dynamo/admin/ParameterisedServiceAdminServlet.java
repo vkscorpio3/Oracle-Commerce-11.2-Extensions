@@ -1,4 +1,4 @@
-package com.conbon.atg.extensions;
+package com.conbon.atg.extensions.dynamo.admin;
 
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
@@ -46,7 +46,7 @@ import atg.nucleus.ServiceAdminServlet;
 @SuppressWarnings("rawtypes")
 public class ParameterisedServiceAdminServlet extends ServiceAdminServlet {
 
-	public CRCServiceAdminServlet(Object pService, Nucleus pNucleus) {
+	public ParameterisedServiceAdminServlet(Object pService, Nucleus pNucleus) {
 		super(pService, pNucleus);
 	}
 
@@ -80,7 +80,6 @@ public class ParameterisedServiceAdminServlet extends ServiceAdminServlet {
 		}
 
 		pResponse.setHeader("Pragma", "no-cache");
-		pResponse.setHeader("Expires", "Tue, 04 Dec 1993 21:29:02 GMT");
 
 		String value = pRequest.getParameter("cancelMethodInvocation");
 		if (value != null) {
